@@ -4,9 +4,17 @@ class Hfst < Formula
   url "https://github.com/hfst/hfst/releases/download/v3.15.0/hfst-3.15.0.tar.gz"
   sha256 "bf50099174a0e14a53ab4d37d514bec2347dea3d4f2ff69d652659357cdd667f"
 
+  depends_on "readline" => :recommended
+
   def install
+    readline = if build.with?("readline")
+              ['--with-readline']
+               else
+              ['--without-readline']
+               end
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
+                          *readline,
                           "--prefix=#{prefix}"
     system "make", "install"
   end
