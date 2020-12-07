@@ -1,8 +1,8 @@
 class Hfst < Formula
   desc "Helsinki Finite-State Technology (library and application suite)"
   homepage "https://hfst.github.io/"
-  url "https://github.com/hfst/hfst/releases/download/v3.15.0/hfst-3.15.0.tar.gz"
-  sha256 "bf50099174a0e14a53ab4d37d514bec2347dea3d4f2ff69d652659357cdd667f"
+  url "https://github.com/hfst/hfst/releases/download/v3.15.2/hfst-3.15.2.tar.gz"
+  sha256 "7e28c6aa2796549b93f5e8aee7ca187716df17b9e687718d4ebf9817d214059d"
 
   depends_on "readline" => :recommended
 
