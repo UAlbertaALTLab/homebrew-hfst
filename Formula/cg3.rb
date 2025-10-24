@@ -10,6 +10,8 @@ desc "Tools for the 3rd edition of the Constraint Grammar formalism"
 
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args()
+    system "make", "-j3"
+    system "make", "install"
   end
 
 end
