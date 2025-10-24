@@ -5,6 +5,8 @@ class Hfst < Formula
   sha256 "ce86d63dd6cb67e7b0eba161065b42b3830afb9669d076ec674d31988408c079"
 
   depends_on "readline" => :recommended
+  depends_on "icu4c"
+  depends_on "pkgconf"  
 
   def install
     readline = if build.with?("readline")
