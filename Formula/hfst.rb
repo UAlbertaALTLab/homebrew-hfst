@@ -8,7 +8,6 @@ class Hfst < Formula
   depends_on "icu4c"
   depends_on "pkgconf"  
   depends_on "openfst"
-  depends_on "foma" => :recommended
 
   def install
     readline = if build.with?("readline")
@@ -16,16 +15,10 @@ class Hfst < Formula
                else
               ['--without-readline']
                end
-    foma = if build.with?("foma")
-           ['--with-foma']
-           else
-           ['--without-foma']
-           end
 
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           *readline,
-                          *foma,
                           *std_configure_args()
                       
     system "make", "install"
