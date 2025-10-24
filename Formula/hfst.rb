@@ -8,7 +8,7 @@ class Hfst < Formula
   depends_on "icu4c"
   depends_on "pkgconf"  
   depends_on "openfst"
-  depends_on "foma"
+  depends_on "ualbertaaltlab/hfst/foma"
 
   def install
     readline = if build.with?("readline")
