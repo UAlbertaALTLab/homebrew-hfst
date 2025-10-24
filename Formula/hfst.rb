@@ -18,6 +18,7 @@ class Hfst < Formula
 
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
+                          "--without-foma",
                           *readline,
                           *std_configure_args()
                       
