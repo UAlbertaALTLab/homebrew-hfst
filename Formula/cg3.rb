@@ -5,7 +5,6 @@ desc "Tools for the 3rd edition of the Constraint Grammar formalism"
   sha256 "f6c286e7d871da63d73e1a2ca241b5c3ba9344fdfd25d4c9593431bd799f387d"
 
   depends_on "cmake" => [:build, :test]
-  use_from_macos "perl" 
   depends_on "boost"
   depends_on "icu4c"
 
