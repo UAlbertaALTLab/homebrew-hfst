@@ -6,6 +6,7 @@ class Foma < Formula
 
   depends_on "cmake" => :build
   depends_on "flex" => :build
+  depends_on "bison" => :build
   uses_from_macos "zlib"
 
   on_linux do
