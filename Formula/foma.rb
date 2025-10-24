@@ -18,7 +18,7 @@ class Foma < Formula
   def install
     ENV["CMAKE_PREFIX_PATH"]="#{HOMEBREW_PREFIX}:#{HOMEBREW_PREFIX}/opt/bison:#{HOMEBREW_PREFIX}/opt/flex"
     chdir "foma" do
-      system "cmake", "CMakeLists.txt"
+      system "cmake", "CMakeLists.txt", *std_cmake_args()
       system "make", "-j3"
       system "make", "install"
     end
