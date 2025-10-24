@@ -8,6 +8,7 @@ class Hfst < Formula
   depends_on "icu4c"
   depends_on "pkgconf"  
   depends_on "openfst"
+  depends_on "foma"
 
   def install
     readline = if build.with?("readline")
@@ -18,7 +19,6 @@ class Hfst < Formula
 
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
-                          "--without-foma",
                           *readline,
                           *std_configure_args()
                       
