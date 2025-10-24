@@ -15,9 +15,13 @@ class Foma < Formula
   conflicts_with "freeling", because: "freeling ships its own copy of foma"
 
   def install
-    system "cmake", "-S", "./foma", "-B", "build", *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    system "cd", "foma"
+    system "cmake", "CMakeLists.txt"
+    system "make", "-j3"
+    system "make", "install"
+    #system "cmake", "-S", "./foma", "-B", "build", *std_cmake_args
+    #system "cmake", "--build", "build"
+    #system "cmake", "--install", "build"
   end
 
 end
