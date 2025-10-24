@@ -16,6 +16,7 @@ class Foma < Formula
   conflicts_with "freeling", because: "freeling ships its own copy of foma"
 
   def install
+    ENV["CMAKE_PREFIX_PATH"]="#{HOMEBREW_PREFIX}:#{HOMEBREW_PREFIX}/opt/bison:#{HOMEBREW_PREFIX}/opt/flex"
     chdir "foma" do
       system "cmake", "CMakeLists.txt"
       system "make", "-j3"
