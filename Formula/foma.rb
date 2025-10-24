@@ -5,7 +5,7 @@ class Foma < Formula
   head "https://github.com/mhulden/foma.git"
 
   depends_on "cmake" => :build
-  uses_from_macos "flex" => :build
+  depends_on "flex" => :build
   uses_from_macos "zlib"
 
   on_linux do
