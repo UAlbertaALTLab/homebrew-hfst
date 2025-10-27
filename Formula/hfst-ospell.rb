@@ -10,6 +10,7 @@ class HfstOspell < Formula
   depends_on "libtool" => :build
   depends_on "libarchive"  
   depends_on "libxml++" 
+  depends_on "libxml2"
 
   def install
     system "./autogen.sh"
