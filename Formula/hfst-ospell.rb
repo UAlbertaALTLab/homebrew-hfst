@@ -6,6 +6,7 @@ class HfstOspell < Formula
       revision: "85edd77e959df213d2e713cbd3ca0ff9a600f462"
 
   depends_on "autoconf" => :build
+  depends_on "automake" => :build
   depends_on "libarchive"  
   uses_from_macos "libxml2"
 
