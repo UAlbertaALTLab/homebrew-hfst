@@ -9,13 +9,12 @@ class HfstOspell < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "libarchive"  
-  depends_on "libxml++" 
-  depends_on "libxml2"
 
   def install
     system "./autogen.sh"
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
+                          "--without-libxmlpp", # see https://github.com/hfst/hfst-ospell/issues/48
                           *std_configure_args()
     system "make", "install"
   end
